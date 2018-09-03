@@ -10,7 +10,7 @@
 class Solution {
 public:
     void get(TreeNode* root,vector<int>&tmp,vector<vector<int>>&num){
-        if(!root)return;
+        if(!root)return;//空节点，不是根节点或叶节点返回 
         tmp.push_back(root->val);
         if(!root->left&&!root->right)num.push_back(tmp);
         get(root->left,tmp,num);
