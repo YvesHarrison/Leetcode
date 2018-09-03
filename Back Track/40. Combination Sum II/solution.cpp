@@ -16,7 +16,6 @@ public:
         vector<vector<int>>res;
         vector<int>tmp;
         sort(candidates.begin(),candidates.end());
-        
         backtrack(res,candidates,tmp,target,0);
         return res;
     }
