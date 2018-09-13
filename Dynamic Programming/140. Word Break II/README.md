@@ -1,2 +1,2 @@
-DP+Backtrack
+DP+Backtrack or DP faces MLE or TLE because some very long but can not be broken string test case like "aaaaa.....aaaaa". So test the string can be broken first before finding very possible solutions. 
 　　
