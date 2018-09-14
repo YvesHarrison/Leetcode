@@ -1,0 +1,1 @@
+s(i,j),i=j must be palindromic, then test adjacent numbers are palindromic or not. Based on this initalization s(i,j) is palindromic if and only if s(i)=s(j) and s(i+1,j-1) is palindromic
