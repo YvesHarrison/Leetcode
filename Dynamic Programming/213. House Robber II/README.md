@@ -1,0 +1,1 @@
+To avoid the first house and the last one becoming neighbor, the sequenece should be separate into two parts [0;len-2] and [1,len-1] calculating the result separately with the same method in 198. House Robber and compare the result for larger one. 
