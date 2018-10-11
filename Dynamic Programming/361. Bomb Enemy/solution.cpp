@@ -12,7 +12,7 @@ public:
             for(int j=0;j<col;++j){
                 if(grid[i][j]=='0')zero.push(j);
                 else if(grid[i][j]=='E')kill++;
-                if(grid[i][j]=='W'||j==col-1){//using else if(grid[i][j]=='W'||j==col-1) the condition only consider grid[i][j]=='W' and ignore j==col-1
+                if(grid[i][j]=='W'||j==col-1){
                     while(!zero.empty()){
                         int k=zero.front();
                         dp[i][k].first=kill;
