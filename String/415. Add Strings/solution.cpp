@@ -1,4 +1,4 @@
-class Solution {
+class Solution1 {
 public:
     string addStrings(string num1, string num2) {
         if(num1.size()>num2.size())swap(num1,num2);
@@ -45,6 +45,24 @@ public:
                 if(add)res += '1';
             }
         }
+        reverse(res.begin(),res.end());
+        return res;
+    }
+};
+
+class Solution2 {
+public:
+    string addStrings(string num1, string num2) {
+        string res = "";
+        int carry = 0,sum;
+        for(int i = num1.size() - 1, j = num2.size() - 1; i >= 0 || j >= 0;){
+            sum = carry;
+            if(i >= 0) sum += num1[i--] - '0';
+            if(j >= 0) sum += num2[j--] - '0';
+            res += (sum % 10 + '0');
+            carry = sum /10;
+        }
+        if(carry) res += '1';
         reverse(res.begin(),res.end());
         return res;
     }
