@@ -1,4 +1,4 @@
-class Solution {
+class Solution1 {
 public:
     void backtracking(vector<vector<int>>&res,vector<int> tmp, vector<int> nums){
         if(tmp.size()==nums.size()){
@@ -17,6 +17,18 @@ public:
         vector<vector<int>>res;
         vector<int> tmp;
         backtracking(res,tmp,nums);
+        return res;
+    }
+};
+
+class Solution2 {
+public:
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<vector<int>>res;
+        sort(nums.begin(),nums.end());
+        do{
+            res.push_back(nums);
+        }while(next_permutation(nums.begin(),nums.end()));
         return res;
     }
 };
